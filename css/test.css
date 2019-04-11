@@ -1,0 +1,225 @@
+@charset "utf-8";
+*,*::after,*::before{box-sizing: inherit;}
+html,
+body{
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border:0;
+	outline:0;
+	font-weight:inherit;
+	font-style:inherit;
+	font-size:100%;
+	font-family:inherit;
+	vertical-align:baseline;
+	background: url("../img/bg.png");
+	background-repeat: repeat;
+	background-position: top left;
+}
+body{
+	font-size: 18px;
+	font-family: "sans-serif";
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	color: #444444;
+	cursor: default;
+}
+body img{
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 100%;
+}
+body ul,
+body ol{
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style-position: inside;
+}
+.main-wrapper{
+	margin: 5px auto;
+	padding: 0;
+	width: 980px;
+	max-width: 980px;
+	min-width: 980px;
+	background-color: #FBFBFB;
+	border: 1px solid rgba(0,0,0,.1);
+	border-radius: 5px;
+	border-top: 2px solid #F34C28;
+	border-bottom: 2px solid #F34C28;
+	box-shadow: 0px 0px 2px 2px rgba(0,0,0,.1);
+	-webkit-box-shadow: 0px 0px 2px 2px rgba(0,0,0,.1);
+	-moz-box-shadow: 0px 0px 2px 2px rgba(0,0,0,.1);
+}
+.main-header{
+	padding: 5px;
+	margin: 0;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	overflow: hidden;
+}
+.header-logo{
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.header-logo img{
+	display: block;
+	margin: 0 10px 0 0;
+	padding: 0;
+	border: 0;
+	float: left;
+	width: 130px;
+	height: 50px
+}
+.header-logo h1{
+	display: block;
+	margin: 0;
+	padding: 0;
+	float: left;
+	font-size: 35px;
+	line-height: 50px;
+	font-family: "sans-serif";
+	font-weight: normal;
+	text-align: left;
+	color: #444444;
+	cursor: default;
+}
+.header-links{
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+.header-links > ul > li{
+	margin: 4px 0;
+	padding: 0;
+	list-style: disc;
+	list-style-position: inside;
+	font-size: 16px;
+	font-family: "sans-serif"; 
+	font-weight: normal;
+	color: #444444;
+}
+.header-links > ul > li > span{
+	font-size: 16px;
+	font-family: "sans-serif"; 
+	font-weight: normal;
+	color: #444444;
+	cursor: default;
+}
+.header-links > ul > li > span::after{
+	content: ":";
+	color: #444444;
+}
+.header-links > ul > li > a{
+	font-size: 16px;
+	font-family: "sans-serif"; 
+	font-weight: normal;
+	text-decoration: none;
+	color: #F74E27;
+}
+.header-links > ul > li > a:hover,
+.header-links > ul > li > a:focus,
+.sidebar-navigation > ol > li > a:hover,
+.sidebar-navigation > ol > li > a:focus,
+.main-footer p a:hover,
+.main-footer p a:focus{
+	outline: none;
+	text-decoration: underline;
+	color: #004891;
+}
+
+.content-wrapper{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-content: center;
+	align-self: flex-start;
+	align-items: stretch;
+	margin: 0;
+	padding: 0;
+}
+
+.left-sedebar{
+	width: 20%;
+	max-width: 20%;
+	padding: 4px;
+	margin: 0;
+	border-right: 1px solid rgba(0,0,0,.1);
+}
+.sidebar-navigation{
+	margin: 0;
+	padding: 0;
+	border: 1px solid rgba(0,0,0,.1)
+}
+.sidebar-navigation h2{
+	display: block;
+	padding: 2px 4px;
+	margin: 0;
+	background: #F3F3F3;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	font-size: 20px;
+	font-family: "sans-serif";
+	font-weight: normal;
+	color: #444444;
+	text-align: left;
+	cursor: default;
+}
+.sidebar-navigation > ol > li{
+	margin: 0 2px;
+	padding: 0;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	list-style-position: inside;
+	font-size: 18px;
+	font-family: "sans-serif"; 
+	font-weight: normal;
+	color: #444444;
+}
+.sidebar-navigation > ol > li:last-child{
+	border-bottom: none;
+}
+.sidebar-navigation > ol > li > a{
+	display: inline-block;
+	padding: 2px 0;
+	margin: 0;
+	font-size: 18px;
+	font-family: "sans-serif";
+	font-weight: normal;
+	color: #444444;
+	text-decoration: none;
+	text-align: left;
+	cursor: pointer;
+}
+
+.main-content{
+	width: 80%;
+	max-width: 80%;
+	margin: 0;
+	padding: 4px;
+}
+
+.main-footer{
+	margin: 0;
+	padding: 4px;
+	border-top: 1px solid rgba(0,0,0,.1);
+}
+.main-footer p{
+	margin: 0 auto;
+	padding: 0;
+	font: 14px "sans-serif";
+	color: #444444;
+	text-align: center;
+	text-decoration: none;
+	cursor: default;
+}
+.main-footer p a{
+	font: 14px "sans-serif";
+	text-decoration: none;
+	cursor: pointer;
+	color: #F74E27;
+}

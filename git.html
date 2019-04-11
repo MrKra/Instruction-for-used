@@ -1,0 +1,289 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="main.css" type="text/css" rel="stylesheet" />
+<title>Git &amp; GitHub</title>
+</head>
+<body>
+	<div class="main-wrapper">
+		<header class="main-header">
+			<div class="logo">
+				<img src="logo.png" alt="GIT">
+				<h1>Инструкция по применению</h1>
+			</div>
+			<div class="links">
+				<ul>
+					<li><span>Скачать Git</span>&nbsp;<a href="" target="_blank">Git-Dowloads</a></li>
+					<li><span>Регистрация на GitHub</span>&nbsp;<a href="https://github.com/" target="_blank">GitHub</a></li>
+				</ul>
+			</div>
+		</header><!-- of main-header -->
+		<div class="content">
+			<aside class="sidebar">
+				<nav class="navigation">
+					<h2>Навигация</h2>
+					<ol>
+						<li><a href="">Инструкция Git</a></li>
+						<li><a href="">Инструкция Gulp</a></li>
+						<li><a href="">Инструкция SASS</a></li>
+					</ol>
+				</nav>
+			</aside><!-- of sidebar -->
+			<main class="main">
+				
+				<section class="main-section">
+					<h2>С чего начать</h2>
+					<div class="main-section-block">
+						<ol>
+							<li><span>Скачать Git</span>&nbsp;<a href="" target="_blank">Git-Dowloads</a></li>
+							<li><span>Регистрация на GitHub</span>&nbsp;<a href="https://github.com/" target="_blank">GitHub</a></li>
+						</ol>
+						<p>Выполним всего две команды для настройки Git - ваше имя и почта</p>
+						<div class="pre">
+							<ol>
+								<li>&nbsp;git config --global user.name "Иван Иванов"</li>
+								<li>&nbsp;git config --global user.email "ivanov@example.com"</li>
+							</ol>
+						</div>
+						<p>Инициализировать (создать) репозиторий в пустой папке</p>
+						<div class="pre">
+							<p>&nbsp;git init</p>
+						</div>
+						<div class="example">
+							<h3>Пример создания репозиторий в пустой папке</h3>
+							<div class="example__wrapper">
+							<span class="example-screenshot__large">
+								<img src="scren/sc1.jpg" alt="sc1" />
+							</span>
+							<span class="example-screenshot__large">
+								<img src="scren/sc2.jpg" alt="sc1" />
+							</span>
+							</div>
+						</div>
+					</div><!-- of main-section-block -->
+				</section><!-- of main-section -->
+				
+				<section class="main-section">
+					<h2>ФИКСАЦИЯ ИЗМЕНЕНИЙ</h2>
+					<div class="main-section-block">
+						<p>Посмотрим статус нашего репозитория</p>
+						<div class="pre">
+							<p>&nbsp;git status</p>
+						</div>
+						<p>Передаём файлы под контроль git</p>
+						<div class="pre">
+							<p>&nbsp;git add .</p>
+						</div>
+						<p>Передаём файлы под контроль git по имени файла</p>
+						<div class="pre">
+							<p>&nbsp;git add name file</p>
+						</div>
+						<em class="example-min">
+							<b>Пример</b>&nbsp;<p>&nbsp;git add file-respons.html</p>
+						</em>
+						<p>Фиксируем изменения (радактор Vim)</p>
+						<div class="pre">
+							<p>&nbsp;git commit</p>
+						</div>
+						<span class="notice">
+							<h4>Мини шпаргалка по Vim</h4>
+							<ol>
+								<li><em>Выход без сохранения изменений</em>&nbsp;<b>:q!</b></li>
+								<li><em>Выход с сохранением изменений</em>&nbsp;<b>:wq</b></li>
+								<li><em>Вставка текста там, где стоит курсор</em>&nbsp;<b>i</b></li>
+								<li><em>Вставка текста в конце текущей строки</em>&nbsp;<b>A</b></li>
+							</ol>
+						</span>
+						<p>Фиксируем изменения</p>
+						<div class="pre">
+							<p>&nbsp;git commit –m "комментарий"</p>
+						</div>
+						<span class="notice">
+							<p>Используйте эту форму коментария если не хотите оказаться в редакторе <b>Vim</b></p>
+						</span>
+						<p>Можно объединить git add и git commit в одну команду</p>
+						<div class="pre">
+							<p>&nbsp;git commit –a –m "комментарий"</p>
+						</div>
+						<p>Удаляет файл из индекса и из рабочей папки <b>(требует фиксации)</b></p>
+						<div class="pre">
+							<p>&nbsp;git rm FILE – имя файла</p>
+						</div>
+						<em class="example-min">
+							<b>Пример</b>&nbsp;<p>&nbsp;git rm FILE – file-respons.html</p>
+						</em>
+						<p>Удаляет файл только из индекса git <b>(требует фиксации)</b></p>
+						<div class="pre">
+							<p>&nbsp;git rm --cached FILE – имя файла</p>
+						</div>
+						<em class="example-min">
+							<b>Пример</b>&nbsp;<p>&nbsp;git rm --cached FILE – file-respons.html</p>
+						</em>
+					</div><!-- of main-section-block -->
+				</section><!-- of main-section -->
+				
+				<section class="main-section">
+					<h2>ИСТОРИЯ ИЗМЕНЕНИЙ</h2>
+					<div class="main-section-block">
+						<p>Просмотр лога коммитов</p>
+						<div class="pre">
+							<p>&nbsp;git log</p>
+						</div>
+	
+						<p>Просмотр подробного лога коммитов</p>
+						<div class="pre">
+							<p>&nbsp;git log --p</p>
+						</div>
+						
+						<p>Откат файла к последнему чистому состоянию <b>(отмена индексации)</b></p>
+						<div class="pre">
+							<p>&nbsp;git checkuot -- имя файла</p>
+						</div>
+						<em class="example-min">
+							<b>Пример</b>&nbsp;<p>&nbsp;git checkuot -- file-respons.html</p>
+						</em>
+						
+						<p>Откат всех файлов к последнему чистому состоянию</p>
+						<div class="pre">
+							<p>&nbsp;git checkuot --all</p>
+						</div>
+						
+						<p>Откат к полследнему чистому состоянию репозитория <b>(отмена индексации)</b></p>
+						<div class="pre">
+							<p>&nbsp;git reset HEAD</p>
+						</div>
+						
+						<p>Откат к указанному коммиту с потерей всех изменений</p>
+						<div class="pre">
+							<p>&nbsp;git reset --hard HEAD</p>
+						</div>
+						<em class="notice">
+							<p>Ключ <b>HEAD</b> озночает к последнему комиту</p>
+						</em>
+						
+						<p>Откат к указанному числом коммиту с потерей всех изменений</p>
+						<div class="pre">
+							<p>&nbsp;git reset --hard HEAD~число</p>
+						</div>
+						<span class="example-min">
+							<b>Пример</b>&nbsp;<p>&nbsp;git reset --hard HEAD~5</p>
+						</span>
+						<em class="notice">
+							<p>Ключ <b>HEAD~5</b> озночает откат на 5 коммита назад</p>
+						</em>
+						
+						<p>Также можно откатываться по хеш коду комита по полному коду или по первым 4м символам</p>
+						<div class="pre">
+							<ol>
+								<li>git reset --hard полный хеш код</li>
+								<li>git reset --hard первые 4 символа</li>
+							</ol>
+						</div>
+						<em class="example-min">
+							<ol>
+								<li>git reset --hard ca82a6dff817ec66f44342007202690a93763949</li>
+								<li>git reset --hard ca82</li>
+							</ol>
+						</em>
+						
+						<p>Добавление изменений к последнему коммиту</p>
+						<div class="pre">
+							<p>&nbsp;git commit --amend</p>
+						</div>
+						<em class="notice">
+							<h4>Пример использования</h4>
+							<ol>
+								<li>git commit -m "текст коммита"</li>
+								<li>git add file-respons.html</li>
+								<li>git commit --amend</li>
+							</ol>
+						</em>
+						
+					</div>
+				</section>
+				
+				<section class="main-section">
+					<h2>УДАЛЕННЫЙ РЕПОЗИТОРИЙ</h2>
+					<div class="main-section-block">
+						
+						<p>Добовляет к текущему ропозиторию ссылку на удалённый репозиторий</p>
+						<div class="pre">
+							<p>&nbsp;git remote add имя репозитория "адрес репозитория"</p>
+						</div>
+						<em class="example-min">
+							<b>Пример</b>&nbsp;<p>&nbsp;git remote add repositgit "https://github.com/repositgit/git.test.git"</p>
+						</em>
+						
+						<p>Покозать список пикреплённых репозиториев</p>
+						<div class="pre">
+							<p>&nbsp;git remote</p>
+						</div>
+						
+						<p>Покозать подробный список пикреплённых репозиториев</p>
+						<div class="pre">
+							<p>&nbsp;git remote -v</p>
+						</div>
+						
+						<p>Взять информацию об изменениях в удалёном репозеторие. (Берётся только информация об изменениях сами изменения не перетаскиваются.)
+						ps: Команда вытягивает например список веток или список комитов но не применяет их к нам</p>
+						<div class="pre">
+							<p>&nbsp;git fetch имя удалёного прикреплёного репозитория</p>
+						</div>
+						<em class="example-min">
+							<b>Пример</b>&nbsp;<p>&nbsp;git fetch repositgit</p>
+						</em>
+						
+						<p>Взять подробную информацию об изменениях в удалёном репозеторие</p>
+						<div class="pre">
+							<p>&nbsp;git fetch show имя удалёного прикреплёного репозитория</p>
+						</div>
+						<em class="example-min">
+							<b>Пример</b>&nbsp;<p>&nbsp;git fetch show repositgit</p>
+						</em>
+						
+						<p>Cвязать текущую локальную ветку с веткой удалёного репозитория</p>
+						<div class="pre">
+							<p>&nbsp;git checkout --track имя удалёного репозитория/master</p>
+						</div>
+						<em class="example-min">
+							<b>Пример</b>&nbsp;<p>&nbsp;git checkout --track repositgit/master</p>
+						</em>
+						
+						<p>Кланируем удалёный репозиторий с Github</p>
+						<div class="pre">
+							<p>&nbsp;git clone (адрес репозитория с github) (имя папки в которую клонируем)</p>
+						</div>
+						<em class="example-min">
+							<b>Пример</b>&nbsp;<p>&nbsp;git clone https://github.com/repositgit/git.test.git my folder</p>
+						</em>
+						
+						<p>Отправить сделанные изменения в удалённый репозиторий на github</p>
+						<div class="pre">
+							<p>&nbsp;git push</p>
+						</div>
+	
+						<p>Забрать изменения с удалёного репозитория если они есть. (Не просто «достаёт» изменения, но и пытается применить изменения с удаленного репозитория к нашему. (Влить удаленную ветку в локальную))</p>
+						<div class="pre">
+							<p>&nbsp;git pull</p>
+						</div>
+						
+						
+					</div>
+				</section>
+				
+				<section class="main-section">
+					<h2>ПОНЯТИЕ «ВЕТКИ»</h2>
+					<div class="main-section-block">
+						
+					</div>
+				</section>
+				
+			</main><!-- of main -->
+		</div><!-- of content -->
+		<footer class="main-footer">
+			<p>Создано для личного использования в 2019г.&nbsp;&copy;&nbsp;<a href="https://github.com/MrKra?tab=repositories" target="_blank">Set</a></p>
+		</footer>
+	</div><!-- of main-wrapper -->
+</body>
+</html>

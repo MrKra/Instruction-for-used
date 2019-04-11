@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="style.css" type="text/css" rel="stylesheet" />
+<title>GIT &amp; GITHUB</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<img src="logo.png" alt="git" />
+			<h1>Инструкция по применению</h1>
+			<a target="_blank"  href="https://git-scm.com/downloads">Git-Dowloads</a>
+		</div>
+		<div class="content">
+			<div class="section">
+				<h2>Начало</h2>
+			<p>Cкачать Git для Windows <a target="_blank"  href="https://git-scm.com/downloads/">Git-Dowloads</a></p>
+			<p>Регистрация на Github <a target="_blank"  href="https://github.com/">Github</a></p>
+			<p>Всего две настройки – ваше имя и почта:</p>
+			<span class="pre"><p>$ git config --global user.name "Иван Иванов"</p>
+			<p>$ git config --global user.email ivanov@example.com</p></span>
+			<p>Создаем репозиторий в пустой папке:</p>
+			<span class="pre"><p>$ git init</p></span>
+			</div>
+			
+			<div class="section"><h2>ФИКСАЦИЯ ИЗМЕНЕНИЙ</h2>
+			<p>Посмотрим статус нашего репозитория:</p><span class="pre"><p>$ git status</p></span>
+			<p>Передаём файлы под контроль git:</p><span class="pre"><p>$ git add .</p></span>
+			<p>Передаём файлы под контроль git по имени файла:</p>
+			<span class="pre"><p>$ git add имя файла</p></span>
+			<p>фиксация изменений:</p><span class="pre"><p>$ git commit –m "комментарий"</p>
+			</span>
+			<p>Можно объединить git add и git commit в одну команду:</p>
+			<span class="pre"><p>$ git commit –a –m "комментарий"</p></span>
+			<p>удаляет файл из индекса и из рабочей папки (требует фиксации)</p>
+			<span class="pre"><p>$ git rm FILE – имя файла</p></span>
+			<p>удаляет файл только из индекса git (требует фиксации)</p>
+			<span class="pre"><p>$ git rm --cached FILE – имя файла</p>
+			</span>
+			</div>
+			
+			<div class="section">
+			<h2>ИСТОРИЯ ИЗМЕНЕНИЙ</h2>
+				<p>просмотр лог коммитов</p>
+				<span class="pre"><p>$ git log</p></span>
+				<p>просмотр подробного лога коммитов</p>
+				<span class="pre"><p>$ git log --p</p></span>
+				<p>откат к полследнему чистому состоянию репозитория</p>
+				<span class="pre"><p>$ git reset HEAD</p></span>
+				
+				<p>откат файла к последнему чистому состоянию</p>
+				<span class="pre"><p>$ git checkuot -- имя файла</p></span>
+				
+				<p>откат всех файлов к последнему чистому состоянию</p>
+				<span class="pre"><p>$ git checkuot --all</p></span>
+				
+				<p>откат к указанному коммиту с потерей всех изменений</p>
+				<span class="pre"><p>$ git reset --hard HEAD (ключ HEAD озночает к последнему комиту)</p><p>$ git reset --hard HEAD~3 (ключ HEAD~3 озночает откат на 3 комита назад)</p></span>
+				<p>Также можно откатываться по хеш коду комита по полному коду или по первы 4м символам</p>
+				<span class="pre"><p>$ git reset --hard ca82a6dff817ec66f44342007202690a93763949</p><p>$ git reset --hard ca82</p></span>
+			</div>
+			
+			<div class="section">
+			<h2>УДАЛЕННЫЙ РЕПОЗИТОРИЙ</h2>
+				<p>Добовляет к текущему ропозиторию ссылку на удалённый репозиторий</p>
+				<span class="pre"><p>$ git remote add имя репозитория "адрес репозитория"</p></span>
+				
+				<p>Покозать список пикреплённых репозиториев</p>
+				<span class="pre"><p>$git remote</p></span>
+				
+				<p>Покозать подробный список пикреплённых репозиториев</p>
+				<span class="pre"><p>$git remote -v</p></span>
+				
+				<p>Взять информацию об изменениях в удалёном репозеторие (берётся только информация об изменениях сами изменения не перетаскиваются ps: например список веток или список комитов но не применяет их к нам )</p>
+				<span class="pre"><p>$ git fetch имя удалёного прикреплёного репозитория</p></span>
+
+				<p>Взять подробную информацию об изменениях в удалёном репозеторие</p>
+				<span class="pre"><p>$ git fetch show имя удалёного прикреплёного репозитория</p></span>
+				
+				<p>Cвязать текущую локальную ветку с веткой удалёного репозитория</p>
+				<span class="pre"><p>$ git checkout --track name repository/master</p></span>
+				
+				<p>Кланируем удалёный репозиторий с Github</p>
+				<span class="pre">
+					<p>$ git clone адрес репозитория с github имя папки в которую скопировать</p>
+					<em><b>Пример:</b> $ git clone https://github.com/repositgit/git.test.git) my folder</em>
+				</span>
+				
+				<p>Отправить сделанные изменения в удалённый репозиторий на github</p>
+				<span class="pre"><p>$ git push</p></span>
+				
+				<p>Забрать изменения с удалёного репозитория если они есть (не просто «достаёт» изменения, но и пытается применить изменения с удаленного репозитория к нашему (влить удаленную ветку в локальную))</p>
+				<span class="pre"><p>$ git pull</p></span>
+				
+			</div>
+			
+			<div class="section">
+				<h2>ПОНЯТИЕ «ВЕТКИ»</h2>
+				
+				<p>Создание ветки</p>
+				<span class="pre">
+					<p>$ git branch имя ветки</p>
+					<em><b>Пример:</b>&nbsp;&nbsp;$ git branch additional-branch</em>
+				</span>
+				
+				<p>Переключится на другую ветку</p>
+				<span class="pre">
+					<p>$ git checkout имя ветки</p>
+					<em><b>Пример:</b>&nbsp;&nbsp;$ git checkout additional-branch</em>
+				</span>
+				
+				<p>Создать новую ветку и сразу переключится на неё</p>
+				<span class="pre">
+					<p>$ git checkout -b имя ветки</p>
+					<em><b>Пример:</b>&nbsp;&nbsp;$ git checkout -b additional-branch</em>
+				</span>
+				
+				<p>Пасмотреть какие ветки есть</p>
+				<span class="pre"><p>$ git branch -v</p></span>
+				
+				<p>Удаление ненужных веток</p>
+				<span class="pre">
+					<p>$ git branch -d имя вети</p>
+					<em><b>Пример:</b>&nbsp;&nbsp;$ branch -d additional-branch</em>
+				</span>
+				
+				<p>Слияние веток (переключаемся на ветку master) и пишем коменду</p>
+				<span class="pre">
+					<p>$ git merge имя ветки</p>
+					<em><b>Пример:</b>&nbsp;&nbsp;$ git merge additional-branch</em>
+				</span>
+				
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>
