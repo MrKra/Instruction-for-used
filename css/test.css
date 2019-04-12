@@ -338,7 +338,22 @@ body ol{
 }
 .block-komand__pre > ul > li,
 .block-komand__pre > ol > li{
-	
+	margin: 5px 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: "serif";
+	font-weight: normal;
+	color: #414141;
+	cursor: default;
+}
+.block-komand__pre > ul > li::before,
+.block-komand__pre > ol > li::before{
+	content: "\0024";
+	font-size: 16px;
+	font-family: "serif";
+	font-weight: normal;
+	color: #414141;
+	margin-right: 5px;
 }
 
 .main-footer{
