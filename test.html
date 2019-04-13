@@ -4,6 +4,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="css/reset.css" type="text/css" rel="stylesheet" />
 <link href="css/test.css" type="text/css" rel="stylesheet" />
+<link href="js/prettyPhoto/css/prettyPhoto.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/prettyPhoto/js/prettyPhoto.js" type="text/javascript"></script>
 <title>test</title>
 </head>
 <body>
@@ -18,7 +21,7 @@
 			
 			<div class="header-links">
 				<ul>
-					<li><span>Скачать Git</span>&nbsp;<a href="" target="_blank">Git-Dowloads</a></li>
+					<li><span>Скачать Git</span>&nbsp;<a href="https://git-scm.com/downloads/" target="_blank">Git-Dowloads</a></li>
 					<li><span>Регистрация на GitHub</span>&nbsp;<a href="https://github.com/" target="_blank">GitHub</a></li>
 				</ul>
 			</div><!-- of  HEADER LINKS -->
@@ -36,12 +39,55 @@
 						<li><a href="">Инструкция Gulp</a></li>
 						<li><a href="">Инструкция SASS</a></li>
 					</ol>
-				</nav>
+				</nav><!-- of SIDEBAR NAVIGATION -->
 				
 			</aside><!-- of LEFT SIDEBAR -->
 			
 			<main class="main-content">
-			!!!
+			
+				<section class="content-section">
+					<h2>С чего начать</h2>
+					
+					<div class="block-komand">
+						<ol>
+							<li><span>Скачать Git</span>&nbsp;<a href="https://git-scm.com/downloads/" target="_blank">Git-Dowloads</a></li>
+							<li><span>Регистрация на GitHub</span>&nbsp;<a href="https://github.com/" target="_blank">GitHub</a></li>
+						</ol>
+					</div>
+					
+					<div class="block-komand">
+						<p>Выполним всего две команды для настройки Git - ваше имя и почта</p>
+						<div class="block-komand__pre">
+							<ol>
+								<li>git config --global user.name "Иван Иванов"</li>
+								<li>git config --global user.email "ivanov@example.com"</li>
+							</ol>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Инициализировать (создать) репозиторий в пустой папке</p>
+						<div class="block-komand__pre">
+							<p>git init</p>
+						</div>
+						<div class="block-komand__example">
+							<h3>Пример создания репозиторий в пустой папке</h3>
+							<div class="block-komand__example-wrapper">
+								<span class="screenshot-large">
+									<a href="scren/sc1.jpg" rel="prettyPhoto">
+										<img src="scren/sc1.jpg" alt="" />
+									</a>
+								</span>
+								<span class="screenshot-large">
+									<a href="scren/sc2.jpg" rel="prettyPhoto">
+										<img src="scren/sc2.jpg" alt="" />
+									</a>
+								</span>
+							</div>
+						</div>
+					</div>
+				</section>
+
 			</main><!-- of MAIN CONTENT -->
 			
 		</div><!-- of CONTENT WRAPPER -->
@@ -52,4 +98,5 @@
 		
 	</div><!-- of MAIN WRAPPER -->
 </body>
+<script src="js/main.js" type="text/javascript"></script>
 </html>
