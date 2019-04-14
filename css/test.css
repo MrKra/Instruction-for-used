@@ -327,6 +327,14 @@ body ol{
 	border: 1px solid #dedee5;
 	border-radius: 4px;
 }
+.block-komand__pre .commit{
+	display: block;
+	margin: 5px 0;
+	padding: 4px 6px;
+	font-size: 18px;
+	font-family: "sans-searif";
+	font-weight: normal;
+}
 .block-komand__pre > ul,
 .block-komand__pre > ol{
 	display: block;
