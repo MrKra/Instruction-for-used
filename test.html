@@ -88,11 +88,7 @@
 						
 					</div>
 				</section>
-<<<<<<< HEAD
 				
-=======
-
->>>>>>> d71af7e7617546d327ef22652969f6aabcf1b4a6
 				<section class="content-section">
 					<h2>ФИКСАЦИЯ ИЗМЕНЕНИЙ</h2>
 					
@@ -114,54 +110,72 @@
 						<p>Передаём файлы под контроль git по имени файла</p>
 						<div class="block-komand__pre">
 							<p>git add имя файла</p>
-							<div class="block-komand__example">
-								<span>Пример</span><p>git add file-respons.html</p>
-								<!--<span class="commit"></span>-->
-							</div>
+						</div>
+						<div class="block-komand__example">
+							<span>Пример</span><p>git add file-respons.html</p>
+						</div>
+						<div class="block-komand__notice">
+							<p class="text">Если нужно добавить несколько файлов то файлы добовляются через пробел некакие запятые не ставятся <b>($ git add file-respons.html file-moon.php file-set.php и.т.д)</b></p>
 						</div>
 					</div>
 					
 					<div class="block-komand">
 						<p>Фиксируем изменения (радактор <b>Vim</b>)</p>
 						<div class="block-komand__pre">
-							<p></p>
+							<p>git commit</p>
+						</div>
+						<div class="block-komand__notice">
+							<h3>Мини шпаргалка по <b>Vim</b></h3>
+							<div class="block-komand__notice-wrapper">
+								<ol>
+									<li>Выход без сохранения изменений:&nbsp;&mdash;&nbsp;<b>:q!</b></li>
+									<li>Выход с сохранением изменений:&nbsp;&mdash;&nbsp;<b>:wq</b></li>
+									<li>Вставка текста там, где стоит курсор:&nbsp;&mdash;&nbsp;<b>i</b></li>
+									<li>Вставка текста в конце текущей строки:&nbsp;&mdash;&nbsp;<b>A</b></li>
+								</ol>
+							</div>
 						</div>
 					</div>
 					
 					<div class="block-komand">
 						<p>Фиксируем изменения</p>
 						<div class="block-komand__pre">
-							<p></p>
+							<p>git commit -m "текст коментария"</p>
+						</div>
+						<div class="block-komand__notice">
+							<p class="text">Используйте эту коменду для коммитов если не хотите оказаться в редакторе <b>Vim</b></p>
 						</div>
 					</div>
 					
 					<div class="block-komand">
 						<p>Можно объединить git add и git commit в одну команду</p>
 						<div class="block-komand__pre">
-							<p></p>
+							<p>git commit –a –m "текст коментария"</p>
 						</div>
 					</div>
 					
 					<div class="block-komand">
-						<p>Удаляет файл из индекса и из рабочей папки (требует фиксации)</p>
+						<p>Удаляет файл из индекса и из рабочей папки <b>(требует фиксации)</b></p>
 						<div class="block-komand__pre">
-							<p></p>
+							<p>git rm FILE – имя файла</p>
+						</div>
+						<div class="block-komand__example">
+							<span>Пример</span><p>git rm FILE - file-respons.html</p>
 						</div>
 					</div>
 					
 					<div class="block-komand">
-						<p>Удаляет файл только из индекса git (требует фиксации)</p>
+						<p>Удаляет файл только из индекса git <b>(требует фиксации)</b></p>
 						<div class="block-komand__pre">
-							<p></p>
+							<p>git rm --cached FILE – имя файла</p>
+						</div>
+						<div class="block-komand__example">
+							<span>Пример</span><p>git rm --cached FILE – file-respons.html</p>
 						</div>
 					</div>
 					
 				</section>
-<<<<<<< HEAD
 
-=======
-				
->>>>>>> d71af7e7617546d327ef22652969f6aabcf1b4a6
 			</main><!-- of MAIN CONTENT -->
 			
 		</div><!-- of CONTENT WRAPPER -->
