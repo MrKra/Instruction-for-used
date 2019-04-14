@@ -143,7 +143,7 @@
 							<p>git commit -m "текст коментария"</p>
 						</div>
 						<div class="block-komand__notice">
-							<p class="text">Используйте эту коменду для коммитов если не хотите оказаться в редакторе <b>Vim</b></p>
+							<p class="text">Используйте эту команду для коммитов если не хотите оказаться в редакторе <b>Vim</b></p>
 						</div>
 					</div>
 					
@@ -171,6 +171,102 @@
 						</div>
 						<div class="block-komand__example">
 							<span>Пример</span><p>git rm --cached FILE – file-respons.html</p>
+						</div>
+					</div>
+					
+				</section>
+				
+				<section class="content-section">
+					<h2>ИСТОРИЯ ИЗМЕНЕНИЙ</h2>
+					
+					<div class="block-komand">
+						<p>Просмотр лога коммитов</p>
+						<div class="block-komand__pre">
+							<p>git log</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Просмотр подробного лога коммитов</p>
+						<div class="block-komand__pre">
+							<p>git log --p</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Откат файла к последнему чистому состоянию <b>(отмена индексации)</b></p>
+						<div class="block-komand__pre">
+							<p>git checkuot -- имя файла</p>
+						</div>
+						<div class="block-komand__example">
+							<span>Пример</span><p>git checkuot -- file-respons.html</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Откат всех файлов к последнему чистому состоянию</p>
+						<div class="block-komand__pre">
+							<p>git checkuot --all</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Откат к полследнему чистому состоянию репозитория <b>(отмена индексации)</b></p>
+						<div class="block-komand__pre">
+							<p>git reset HEAD</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Откат к указанному коммиту с потерей всех изменений</p>
+						<div class="block-komand__pre">
+							<p>git reset --hard HEAD</p>
+						</div>
+						<div class="block-komand__notice">
+							<p>Ключ <strong>HEAD</strong> озночает к последнему комиту</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Откат к указанному <b>числом</b> коммиту с потерей всех изменений</p>
+						<div class="block-komand__pre">
+							<p>git reset --hard HEAD~число</p>
+						</div>
+						<div class="block-komand__example">
+							<span>Пример</span><p>git reset --hard HEAD~5</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Также можно откатываться по хеш коду комита по полному коду или по первым 4м символам</p>
+						<div class="block-komand__pre">
+							<ol>
+								<li>git reset --hard полный хеш код</li>
+								<li>git reset --hard первые 4 символа</li>
+							</ol>
+						</div>
+						<div class="block-komand__example">
+							<ol>
+								<li>git reset --hard ca82a6dff817ec66f44342007202690a93763949</li>
+								<li>git reset --hard ca82</li>
+							</ol>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Добавление изменений к последнему коммиту</p>
+						<div class="block-komand__pre">
+							<p>git commit --amend</p>
+						</div>
+						<div class="block-komand__notice">
+							<h3>Пример использования</h3>
+							<div class="block-komand__notice-wrapper">
+								<ol>
+									<li>git commit -m "текст коммита"</li>
+									<li>git add file-respons.html</li>
+									<li>git commit --amend</li>
+								</ol>
+							</div>
 						</div>
 					</div>
 					

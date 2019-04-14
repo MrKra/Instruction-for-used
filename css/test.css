@@ -357,8 +357,16 @@ body ol{
 .block-komand__notice-wrapper ul li p::before,
 .block-komand__example-wrapper ol li p::before,
 .block-komand__notice-wrapper ol li p::before,
+.block-komand__example-wrapper ul li::before,
+.block-komand__notice-wrapper ul li::before,
+.block-komand__example-wrapper ol li::before,
+.block-komand__notice-wrapper ol li::before,
 .block-komand__example p::before,
-.block-komand__notice p::before{
+.block-komand__notice p::before,
+.block-komand__example ul li::before,
+.block-komand__notice ul li::before,
+.block-komand__example ol li::before,
+.block-komand__notice ol li::before{
 	content: "\0024";
 	font-size: 16px;
 	font-family: "serif";
@@ -376,6 +384,18 @@ body ol{
 .block-komand__example > p.text,
 .block-komand__notice > p.text{
 	display: inline-block;
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	font-family: "serif";
+	font-weight: normal;
+	color: #414141;
+	cursor: default;
+}
+.block-komand__example > ul > li,
+.block-komand__notice > ul > li,
+.block-komand__example > ol > li,
+.block-komand__notice > ol > li{
 	margin: 0;
 	padding: 0;
 	font-size: 18px;
