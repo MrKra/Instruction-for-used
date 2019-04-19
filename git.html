@@ -425,6 +425,130 @@
 					</div>
 					
 				</section><!-- ПОНЯТИЕ ВЕТКИ -->
+				
+				<section class="content-section">
+					<h2>«АВАРИЙНЫЕ» ИНСТРУМЕНТЫ</h2>
+					
+					<div class="block-komand">
+						<p>«Догнать» последний коммит. Используется,
+						чтобы добавить в него забытые изменения
+						или изменить его message. Всё, что
+						подготовлено для фиксации, будет
+						зафиксировано в последнем коммите, не
+						создавая новый</p>
+						<div class="block-komand__pre">
+							<p>git commit --amend</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Отмена индексации, то есть отмена
+						подготовки файла к фиксации. Сам файл при
+						этом не меняется</p>
+						<div class="block-komand__pre">
+							<p>git reset HEAD ФАЙЛ</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>«Мягкий» откат репозитория в состояние
+						указанного коммита.
+						Все изменения, бывшие ранее коммитами
+						после указанного, останутся в индексе. И вы
+						снова можете их зафиксировать</p>
+						<div class="block-komand__pre">
+							<p>git reset --soft коммит</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Откат репозитория в состояние указанного
+							коммита. Обратите внимание – коммиты
+							после указанного пропадают из git log, но
+							на самом деле все еще хранятся в
+							репозитории</p>
+						<div class="block-komand__pre">
+							<p>git reset --hard коммит</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Сброс файла к состоянию последнего коммита.</p>
+						<div class="block-komand__pre">
+							<p>git checkout -- имя файла</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>История всех изменений (что мы делали с репозиторием)</p>
+						<div class="block-komand__pre">
+							<p>git reflog</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Аворийное вастоновление используя метки <strong>reflog</strong></p>
+						<div class="block-komand__pre">
+							<p>git reset --hard HEADметка</p>
+						</div>
+						<div class="block-komand__example">
+							<span>Пример</span><p>git reset --hard HEAD@{4}</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Команда для перемещения (суть – перемещение изменений из одной ветки в другую)</p>
+						<div class="block-komand__pre">
+							<p>git rebase</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Перемещение на N коммитов назад</p>
+						<div class="block-komand__pre">
+							<p>git rebase -i HEAD~число</p>
+						</div>
+						<div class="block-komand__example">
+							<span>Пример</span><p>git rebase -i HEAD~5</p>
+						</div>
+						<div class="block-komand__notice">
+							<h3>команды для rebase</h3>
+							
+							<ol>
+								<li><strong>p: pick</strong> = Взять коммит в будущую историю без изменений</li>
+								<li><strong>r: reword</strong> = Взять коммит но изменить сообщение коммита</li>
+								<li><strong>e: edit</strong> = Начнёт применять, но остановитесь для ваших изменений</li>
+								<li><strong>s: squash</strong> = используйте commit, но объединитесь в предыдущую фиксацию</li>
+								<li><strong>f: fixup</strong> = взять коммит но отбросьте сообщение журнала этой фиксации</li>
+								<li><strong>x: exec</strong> = выполнить команду с помощью оболочки</li>
+								<li><strong>d: drop</strong> = Убрать выброный еомит из истории</li>
+							</ol>
+						
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Выйти из режима <strong>rebase</strong></p>
+						<div class="block-komand__pre">
+							<p>git rebase --abort</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Эта команда спрячет все незафиксированные изменения в своеобразный буфер</p>
+						<div class="block-komand__pre">
+							<p>git stash</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Достанет изменения из буфера</p>
+						<div class="block-komand__pre">
+							<p>git stash apply</p>
+						</div>
+					</div>
+
+				</section><!---->
 
 			</main><!-- of MAIN CONTENT -->
 			
