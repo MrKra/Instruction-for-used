@@ -87,7 +87,7 @@
 						</div>
 						
 					</div>
-				</section>
+				</section><!-- С чего начать -->
 				
 				<section class="content-section">
 					<h2>ФИКСАЦИЯ ИЗМЕНЕНИЙ</h2>
@@ -174,7 +174,7 @@
 						</div>
 					</div>
 					
-				</section>
+				</section><!-- ФИКСАЦИЯ ИЗМЕНЕНИЙ -->
 				
 				<section class="content-section">
 					<h2>ИСТОРИЯ ИЗМЕНЕНИЙ</h2>
@@ -270,7 +270,93 @@
 						</div>
 					</div>
 					
-				</section>
+				</section><!-- ИСТОРИЯ ИЗМЕНЕНИЙ -->
+				
+				<section class="content-section">
+					<h2>УДАЛЕННЫЙ РЕПОЗИТОРИЙ</h2>
+					
+					<div class="block-komand">
+						<p>Добовляет к текущему ропозиторию ссылку на удалённый репозиторий</p>
+						<div class="block-komand__pre">
+							<p>git remote add имя репозитория "адрес репозитория"</p>
+						</div>
+						<div class="block-komand__example">
+							<span>Пример</span><p>git remote add repositgit "https://github.com/repositgit/git.test.git"</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Покозать список пикреплённых репозиториев</p>
+						<div class="block-komand__pre">
+							<p>git remote</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Покозать подробный список пикреплённых репозиториев</p>
+						<div class="block-komand__pre">
+							<p>git remote -v</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Взять информацию об изменениях в удалёном репозеторие. (Берётся только информация об изменениях сами изменения не перетаскиваются.) ps: Команда вытягивает например список веток или список комитов но не применяет их к нам</p>
+						<div class="block-komand__pre">
+							<p>git fetch имя удалёного прикреплёного репозитория</p>
+						</div>
+						<div class="block-komand__example">
+							<span>Пример</span><p>git fetch repositgit</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Взять подробную информацию об изменениях в удалёном репозеторие</p>
+						<div class="block-komand__pre">
+							<p>git fetch show имя удалёного прикреплёного репозитория</p>
+						</div>
+						<div class="block-komand__example">
+							<span>Пример</span><p>git fetch show repositgit</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Cвязать текущую локальную ветку с веткой удалёного репозитория</p>
+						<div class="block-komand__pre">
+							<p> git checkout --track имя удалёного репозитория/master</p>
+						</div>
+						<div class="block-komand__example">
+							<span>Пример</span><p>git checkout --track repositgit/master</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Кланируем удалёный репозиторий с GitHub</p>
+						<div class="block-komand__pre">
+							<p>git clone (адрес репозитория с github) (имя папки в которую клонируем)</p>
+						</div>
+						<div class="block-komand__example">
+							<span>Пример по HTTPS</span><p>git clone https://github.com/repositgit/git.test.git my folder</p>
+						</div>
+						<div class="block-komand__example">
+							<span>Пример по SSH</span><p>git clone git@github.com:user/git-test.git my folder</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Отправить сделанные изменения в удалённый репозиторий на GitHub</p>
+						<div class="block-komand__pre">
+							<p>git push</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Забрать изменения с удалёного репозитория если они есть. (Не просто «достаёт» изменения, но и пытается применить изменения с удаленного репозитория к нашему. (Влить удаленную ветку в локальную))</p>
+						<div class="block-komand__pre">
+							<p>git pull</p>
+						</div>
+					</div>
+					
+				</section><!-- УДАЛЕННЫЙ РЕПОЗИТОРИЙ -->
 
 			</main><!-- of MAIN CONTENT -->
 			
