@@ -603,7 +603,77 @@
 						</div>
 					</div>
 					
+					<div class="block-komand">
+						<p>Создает аннотированную метку. В
+							отличие от легкой в ней фиксируется
+							сообщение, дата и время создания, имя
+							создавшего. Более того –
+							аннотированные метки могут быть
+							подписаны GPG</p>
+						<div class="block-komand__pre">
+							<p>git tag -a имя метки -m "Сообщение"</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Метки можно создавать и позже.
+							Достаточно при создании указать номер
+							уже существующего коммита</p>
+						<div class="block-komand__pre">
+							<p>git tag -a имя метки -m "Сообщение" 1baf</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Метки по умолчанию не передаются в
+							удаленный репозиторий. Используйте
+							команды</p>
+						<div class="block-komand__pre">
+							<p>git tag -a имя метки -m "Сообщение" 1baf</p>
+						</div>
+						<div class="block-komand__example">
+							<span>Пример</span><p>git push origin metka</p>
+						</div>
+						<div class="block-komand__example">
+							<span>Пример</span><p>git push origin --tags</p>
+						</div>
+					</div>
+					
 				</section><!-- ТЕГИ -->
+				
+				<section class="content-section">
+					<h2>СУБМОДУЛИ</h2>
+					
+					<div class="block-komand__notice" style="text-align: center">
+					СУБМОДУЛЬ – это, фактически, репозиторий внутри вашего репозитория
+					</div>
+					
+					<div class="block-komand">
+						<p>Добавляет в ваш репозиторий субмодуль</p>
+						<div class="block-komand__pre">
+							<p>git submodule add РЕПОЗИТОРИЙ ПАПКА</p>
+						</div>
+						<div class="block-komand__notice" style="text-align: center">
+						Выглядит субмодуль как папка, связанная с другим удаленным репозиторием.
+						После добавления субмодуля нужно зафиксировать изменения, обычной командой <strong>git commit</strong>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Инициализирует субмодули в репозитории, где это еще не сделано (например сразу после клонирования)</p>
+						<div class="block-komand__pre">
+							<p>git submodule init</p>
+						</div>
+					</div>
+					
+					<div class="block-komand">
+						<p>Загружает файлы субмодулей</p>
+						<div class="block-komand__pre">
+							<p>git submodule update</p>
+						</div>
+					</div>
+	
+				</section><!-- СУБМОДУЛИ -->
 
 			</main><!-- of MAIN CONTENT -->
 			
